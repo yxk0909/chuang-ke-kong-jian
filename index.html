@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创客空间,专业为互联网而生</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="style/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<style type="text/css">
+		/*fullpage 背景*/
+		.section1 .slide1{ background: url(images/banner01.jpg) no-repeat 50%; background-size: 100% 100%;}
+		.section1 .slide2{ background: url(images/banner02.jpg) no-repeat 50%; background-size: 100% 100%;}
+		.section1 .slide3{ background: url(images/banner03.jpg) no-repeat 50%; background-size: 100% 100%;}
+
+		.section2 { background: url(images/section01.jpg) no-repeat 50%; background-size: 100% 100%;}
+		.section3 { background: url(images/section02.jpg) no-repeat 50%; background-size: 100% 100%;}
+		.section4 { background: url(images/section03.jpg) no-repeat 50%; background-size: 100% 100%;}
+		.section5 { background: url(images/section04.jpg) no-repeat 50%; background-size: 100% 100%;}
+		.section6 { background: url(images/section05.jpg) no-repeat 50%; background-size: 100% 100%;}
+	</style>
+	<script>
+		$(function(){
+			var about_t;  //保存about文字轮播定时器
+			$('#dowebok').fullpage({
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+				menu: '#menu',
+				//banner slide loop
+				afterSlideLoad:function(anchorLink,index,slideIndex,direction){
+					if(slideIndex==0){
+						$(".slide_nr:eq(0)").find("p").animate({
+							opacity:"1",
+							left:"0"
+						}, 1000);
+						$(".slide_nr:eq(0)").find("h2").animate({
+							opacity:"1",
+							left:"0"
+						}, 1000);
+						$(".slide_nr:eq(0)").find("span").animate({
+							opacity:"1",
+							top:"18%"
+						}, 1000);
+					}
+					if(slideIndex==1){
+						$(".slide_nr:eq(1)").find("p").animate({
+							opacity:"1",
+							left:"0"
+						}, 1000);
+						$(".slide_nr:eq(1)").find("h2").animate({
+							opacity:"1",
+							left:"0"
+						}, 1000);
+						$(".slide_nr:eq(1)").find("span").animate({
+							opacity:"1",
+							top:"18%"
+						}, 1000);
+					}
+					if(slideIndex==2){
+						$(".slide_nr:eq(2)").find("p").animate({
+							opacity:"1",
+							left:"0"
+						}, 1000);
+						$(".slide_nr:eq(2)").find("h2").animate({
+							opacity:"1",
+							left:"0"
+						}, 1000);
+						$(".slide_nr:eq(2)").find("span").animate({
+							opacity:"1",
+							top:"18%"
+						}, 1000);
+					}
+				},
+				onSlideLeave:function(anchorLink,index,slideIndex,direction){
+					if(slideIndex==0){
+						$(".slide_nr:eq(0)").find("p").delay(500).animate({
+							opacity:"0",
+							left:"-10%"
+						}, 1000);
+						$(".slide_nr:eq(0)").find("h2").delay(500).animate({
+							opacity:"0",
+							left:"100%"
+						}, 1000);
+						$(".slide_nr:eq(0)").find("span").delay(500).animate({
+							opacity:"0",
+							top:"50%"
+						}, 1000);
+					}
+					if(slideIndex==1){
+						$(".slide_nr:eq(1)").find("p").delay(500).animate({
+							opacity:"0",
+							left:"-10%"
+						}, 1000);
+						$(".slide_nr:eq(1)").find("h2").delay(500).animate({
+							opacity:"0",
+							left:"100%"
+						}, 1000);
+						$(".slide_nr:eq(1)").find("span").delay(500).animate({
+							opacity:"0",
+							top:"50%"
+						}, 1000);
+					}
+					if(slideIndex==2){
+						$(".slide_nr:eq(2)").find("p").delay(500).animate({
+							opacity:"0",
+							left:"-10%"
+						}, 1000);
+						$(".slide_nr:eq(2)").find("h2").delay(500).animate({
+							opacity:"0",
+							left:"100%"
+						}, 1000);
+						$(".slide_nr:eq(2)").find("span").delay(500).animate({
+							opacity:"0",
+							top:"50%"
+						}, 1000);
+					}
+				},
+				// fullpage section
+				afterLoad:function(anchorLink,index){
+					if(index==1){
+						$("#mydiv").show();
+					}
+					if(index==2){
+						$(".section2 .tit").animate({top:"30%"},1000);
+						$(".section2 ul").delay(500).animate({
+							left:"50%"
+						}, 1000);
+					}
+					if(index==3){
+						$(".section3 .tit").animate({top:"30%"},1000);
+						$(".section3 .img01").animate({top:"200px",left:"402px",opacity:1},500);
+						$(".section3 .img02").animate({top:"-10px",left:"730px",opacity:1},500);
+						$(".section3 .img03").animate({top:"-30px",left:"30px",opacity:1},500);
+						$(".section3 .img04").animate({top:"130px",left:"60px",opacity:1},500);
+						$(".section3 .img05").animate({top:"30px",left:"230px",opacity:1},500);
+						$(".section3 .img06").animate({top:"160px",left:"680px",opacity:1},500);
+						$(".section3 .img07").animate({top:"260px",left:"720px",opacity:1},500);
+						$(".section3 .img08").animate({top:"250px",left:"50px",opacity:1},500);
+						$(".section3 .img09").animate({top:"270px",left:"245px",opacity:1},500);
+						$(".section3 .img10").animate({top:"100px",left:"525px",opacity:1},500);
+
+					}
+					if(index==4){
+						$(".section4 .tit").animate({top:"30%"},1000);
+						var i=0;
+						var j=true;
+						//文字轮播
+						function change(){							
+							if(i==($(".section4 .about_nr").length)){  //判断是否为最后一张
+								i=0;	
+							}
+							if(j){      //如果是第一次开始轮播 文字的位置初始化
+								$(".section4 .about_nr").eq(0).animate({left:"4%",opacity:1},1000).siblings().animate({opacity:0},1);
+								j=false;		
+							}else{      //如果不是第一次开始轮播
+								$(".section4 .about_nr").eq(i).animate({left:"4%",opacity:1},1000).siblings().animate({left:"100%"},1000).delay(100).animate({left:"-100%",opacity:0},1);
+							}
+							i++;
+						}
+						setTimeout(change,1); //初次调用轮播保证初次立即开始轮播，只执行一次
+						about_t=setInterval(change,3000);  //定时循环
+						$(".section4 .about_nr").mouseover(function(){   //鼠标经过停止轮播
+							clearInterval(about_t);
+						});
+						$(".section4 .about_nr").mouseout(function(){    //鼠标离开继续轮播
+							about_t=setInterval(change,3000);
+						});
+
+					}
+					if(index==5){
+						$(".section5 .tit").animate({top:"30%"},1000);
+						$(".section5 #carousel1").delay(500).animate({left:0},1000);
+					}
+					if(index==6){
+						$(".section6 .tit").animate({top:"30%"},1000);
+						$(".section6 .contact .contact_left").delay(500).animate({left:0},1000);
+						$(".section6 .contact .contact_right").delay(500).animate({right:0},1000);
+					}
+				},
+				onLeave:function(anchorLink,index){
+					if(index!=1){
+						$("#mydiv").hide();
+					}
+					if(index!=2){
+						$(".section2 .tit").animate({top:"101%"},1000);
+						$(".section2 ul").delay(500).animate({
+							left:"-50%"
+						}, 1000);
+					}
+					if(index!=3){
+						$(".section3 .tit").animate({top:"101%"},1000);
+						$(".section3 .img01").animate({top:"-100%",left:"-130%",opacity:0},100);
+						$(".section3 .img02").animate({top:"-80%",left:"-130%",opacity:0},100);
+						$(".section3 .img03").animate({top:"-60%",left:"-130%",opacity:0},100);
+						$(".section3 .img04").animate({top:"-40%",left:"-130%",opacity:0},100);
+						$(".section3 .img05").animate({top:"-20%",left:"-130%",opacity:0},100);
+						$(".section3 .img06").animate({top:"0%",left:"300%",opacity:0},100);
+						$(".section3 .img07").animate({top:"20%",left:"300%",opacity:0},100);
+						$(".section3 .img08").animate({top:"40%",left:"300%",opacity:0},100);
+						$(".section3 .img09").animate({top:"60%",left:"300%",opacity:0},100);
+						$(".section3 .img10").animate({top:"80%",left:"300%",opacity:0},100);
+					}
+					if(index!=4){
+						$(".section4 .tit").animate({top:"101%"},1000);
+						$(".section4 .about_nr").eq(0).animate({left:"4%",opacity:1},1).siblings().animate({left:"-100%",opacity:0},1);
+						clearInterval(about_t);
+					}
+					if(index!=5){
+						$(".section5 .tit").animate({top:"101%"},1000);
+						$(".section5 #carousel1").delay(500).animate({left:"-100%"},1000);
+					}
+					if(index!=6){
+						$(".section6 .tit").animate({top:"101%"},1000);
+						$(".section6 .contact .contact_left").delay(500).animate({left:"-120%"},1000);
+						$(".section6 .contact .contact_right").delay(500).animate({right:"-90%"},1000);
+					}
+				}
+			});
+			//banner slide loop time
+			setInterval(function(){
+            	$.fn.fullpage.moveSlideRight();
+        	},5000);
+		});
+	</script>
+</head>
+<body>
+	<!--导航-->
+	<header>
+		<h1 class="logo"><a href="#"><img src="images/logo.png"></a></h1>
+		<p>创客14年<br>时间为我们代言</p>
+		<ul id="menu">
+			<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			<li data-menuanchor="page2"><a href="#page2">我们的服务</a></li>
+			<li data-menuanchor="page3"><a href="#page3">产品案例</a></li>
+			<li data-menuanchor="page4"><a href="#page4">关于我们</a></li>
+			<li data-menuanchor="page5"><a href="#page5">合作伙伴</a></li>
+			<li data-menuanchor="page6"><a href="#page6">联系我们</a></li>
+		</ul>
+	</header>
+	
+	<!--fullpage 分屏-->
+	<div id="dowebok">
+		<!--section1-->
+		<div class="section section1">
+			<div class="slide slide1">
+				<div class="slide_nr">
+					<p>WHO WE ARE?</p>
+					<h2>一开始，是行业颠覆者！</h2>
+					<span>From the very beginning,our aim was to revolutionize the industry！</span>
+				</div>		
+			</div>
+			<div class="slide slide2">
+				<div class="slide_nr">
+					<p>WHO WE ARE?</p>
+					<h2>现在，是行业标准重塑者！</h2>
+					<span>Now,we have set the industry standards!</span>
+				</div>
+			</div>
+			<div class="slide slide3">
+				<div class="slide_nr">
+					<p>WHO WE ARE?</p>
+					<h2>将来，重新定义高端建站标准！</h2>
+					<span>In the future,we aim to set the industry standards even higher,<br>and to keep improving benchmarks！</span>
+				</div>
+			</div>
+		</div>
+		<!--section1 end-->
+
+		<!--section2-->
+		<div class="section section2">
+			<div class="tit">
+				<p>WHAT CAN WE DO</p>
+				<h2>我们能做什么</h2>
+			</div>
+			<ul>
+				<li>
+					<div class="top">
+						<i class="iconfont">&#xe73b;</i>
+					</div>
+					<p>高端定制网站</p>
+				</li>
+				<li>
+					<div class="top">
+						<i class="iconfont">&#xe601;</i>
+					</div>
+					<p>APP应用程序</p>
+				</li>
+				<li>
+					<div class="top">
+						<i class="iconfont">&#xe67f;</i>
+					</div>
+					<p>客户端应用程序</p>
+				</li>
+				<li>
+					<div class="top">
+						<i class="iconfont">&#xe6d4;</i>
+					</div>
+					<p>业务系统研发</p>
+				</li>
+				<li>
+					<div class="top">
+						<i class="iconfont">&#xe600;</i>
+					</div>
+					<p>UI美工设计</p>
+				</li>
+			</ul>
+		</div>
+		<!--section2 end-->
+
+		<!--section3-->
+		<div class="section section3">
+			<div class="tit">
+				<p>OUR CASE</p>
+				<h2>我们的案例</h2>
+			</div>
+			<div class="container">
+				<div class="content_photo">
+					<img class="img01" src="images/1.jpg">
+					<img class="img02" src="images/2.jpg">
+					<img class="img03" src="images/3.jpg">
+					<img class="img04" src="images/4.jpg">
+					<img class="img05" src="images/5.jpg">
+					<img class="img06" src="images/6.jpg">
+					<img class="img07" src="images/7.jpg">
+					<img class="img08" src="images/8.jpg">
+					<img class="img09" src="images/9.jpg">
+					<img class="img10" src="images/10.jpg">
+				</div>
+			</div>	
+		</div>
+		<!--section3 end-->
+
+		<!--section4-->
+		<div class="section section4">
+			<div class="tit">
+				<p>ABOUT US</p>
+				<h2>关于我们</h2>
+			</div>
+			<!--shijueca-->
+			<div class="shijue_wrap"> 
+				<ul id="ul_container"> 
+					<li style="z-index: 3;"><img src="images/shijue1.png"></li> 
+					<li style="z-index: 2;"><img src="images/shijue2.png"></li> 
+					<li style="z-index: 4;"><img src="images/shijue3.png"></li> 
+					<li style="z-index: 5;"><img src="images/shijue4.png"></li> 
+					<li style="z-index: 6;"><img src="images/shijue5.png"></li>
+					<li style="z-index: 6;"><img src="images/shijue6.png"></li>
+					<li style="z-index: 6;"><img src="images/shijue7.png"></li>
+					<li style="z-index: 6;"><img src="images/shijue8.png"></li> 
+				</ul>
+				<script>
+					$(function(){
+						var oUl=document.getElementById("ul_container");
+						var	l = oUl.offsetWidth/2;
+						var t = oUl.offsetHeight/2;
+						var aLi=$('#ul_container li');
+						oUl.onmousemove = function( ev ){
+							var oEv = ev || event,
+								iL = oEv.clientX,
+								iT = oEv.clientY;
+
+							for(var i=0; i<aLi.length; i++){
+								aLi[i].style.marginLeft=(iL - l )/100*aLi[i].style.zIndex+'px';
+								aLi[i].style.marginTop=(iT - t )/70*aLi[i].style.zIndex+'px';
+							}
+						}	
+					});
+				</script>
+			</div>
+			<!--shijueca end-->	
+			<div class="about">
+				<div class="about_nr">
+					<h5>精益求精，服务第一</h5>
+					<p>用心做好每一款产品！<br>
+						专业+创新=高品质 做互联网我们是认真的！<br>
+						下一秒，让你看到我们到底有多强
+					</p>
+				</div>
+				<div class="about_nr">
+					<h5>追求完美，技术先行</h5>
+					<p>用心服务创造卓越。创客工坊坚持用心做好每一款产品。<br>
+						前期梳理，到原型UI图确定，从程序开发，到功能测试，从产品交付上线，到后期售后服务 始终以客户为中心，以产品为中心，不断完善细节，追求完美，并提供超过客户预期的增值服务。<br>
+						创客空间，就是帮客户创造利益。
+					</p>
+				</div>
+				<div class="about_nr">
+					<h5>因为专业，所以卓越</h5>
+					<p>创客空间一直秉承“非凡、极致、创新、突破”的思想理念。用非凡的品质打动客户，用极致的服务满足客户，用创新的理念引领客户，用突破的思想开拓未来。在技术飞速发展的今天，实力永远是奠定地位的唯一依据。掌尚人在不断进步，不断成长，源源不断汲取行业知识，洞察行业发展，带给客户最新的技术体验。未来，我们将不断优化公司的各个系统，实现公司全面发展，不断寻求新的突破，完善客户需求，提供更加完善的技术服务支持，实现公司价值观，为社会谋取更多的利益。
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<!--section4 end-->
+		
+		<!--section5-->
+		<div class="section section5">
+			<div class="tit">
+				<p>PARTNERS</p>
+				<h2>合作伙伴</h2>
+			</div>
+			<!--旋转木马-->
+			<ul id="carousel1">
+			    <li><img class="cloudcarousel"  src="images/partner1.jpg"/></li> 
+			    <li><img class="cloudcarousel"  src="images/partner2.jpg"/></li>
+			    <li><img class="cloudcarousel"  src="images/partner3.png"/></li> 
+			    <li><img class="cloudcarousel"  src="images/partner4.jpg"/></li> 
+			    <li><img class="cloudcarousel"  src="images/partner5.jpg"/></li> 
+			    <li><img class="cloudcarousel"  src="images/partner6.jpg"/></li> 
+			    <li><img class="cloudcarousel"  src="images/partner7.jpg"/></li> 
+				<li><img class="cloudcarousel"  src="images/partner8.jpg"/></li>
+				<li><img class="cloudcarousel"  src="images/partner9.jpg"/></li>
+			</ul>
+			<script type="text/javascript" src="js/jquery.js"></script>
+			<script type="text/JavaScript" src="js/CloudCarousel.1.0.5.js"></script>
+			<script type="text/JavaScript" src="js/jquery.mousewheel.js"></script><!--鼠标滚动插件-->
+			<script type="text/javascript">	
+				var jQuery = $.noConflict();  	//解决两个jQuery文件冲突，为jQuery变量规定新的自定义名称(jQuery核心)
+
+				// 这初始化容器中指定的元素，在这种情况下，旋转木马.
+				jQuery("#carousel1").CloudCarousel({			
+					xPos:450,
+					yPos:110,
+					buttonLeft: jQuery('#but1'),
+					buttonRight: jQuery('#but2'),
+					altBox: jQuery("#alt-text"),
+					titleBox: jQuery("#title-text"),				
+					FPS:30,
+					reflHeight:86,
+					reflGap:2,
+					yRadius:40,
+					autoRotateDelay: 1200,
+					speed:0.2,
+					mouseWheel:true,
+					bringToFront:true
+				});	
+			</script>
+		</div>
+		<!--section5 end-->
+		
+		<!--section6-->
+		<div class="section section6">
+			<div class="tit">
+				<p>CONTACT US</p>
+				<h2>联系我们</h2>
+			</div>
+			<div class="contact">
+				<div class="contact_left">
+					<img src="images/tel.png">
+					<p>扫描关注IT行业微信公众账号</p>
+					<p>中国•郑州高新区创业中心科技大厦</p>
+					<p>联系电话：0371-1888-1888</p>
+					<p>地址：河南省郑州市高新区创业中心科技大厦C座</p>
+					<span><img src="images/wx.png"></span>
+				</div>
+				<div class="contact_right">
+					<p>Email: yxk0909@chuangke.com</p>
+					<p>国外域名：<a href="javascript:"">www.changkekongjian.org/en/</a></p>
+					<p>Copyright©2017 郑州市创客空间科技有限公司 保留所有权利</p>
+					<p>豫ICP备 11011011号-1</p>
+					<p>豫公网安备 1101101101100 号</p>
+				</div>
+			</div>
+		</div>
+		<!--section6 end-->
+	</div>
+	<!--fullpage 分屏 end-->
+	
+	<!--粒子特效容器-->
+	<div id="mydiv"></div>
+
+	<!--音频-->
+	<audio preload="preload" loop autoplay="autoplay">
+		<source src="wonderland.mp3" type="audio/mpeg" />
+	</audio>>
+</body>
+
+<!--粒子特效-->
+<script type="text/javascript" src="js/canvas-particle.js"></script>
+<script type="text/javascript">
+	window.onresize=function(){
+    	changePosition();
+    };
+	//配置
+	var config = {
+		vx: 4,	//小球x轴速度,正为右，负为左
+		vy: 4,	//小球y轴速度
+		height: 2,	//小球高宽，其实为正方形，所以不宜太大
+		width: 2,
+		count: 400,		//点个数
+		color: "121, 162, 185", 	//点颜色
+		stroke: "130,255,255", 		//线条颜色
+		dist: 6000, 	//点吸附距离
+		e_dist: 20000, 	//鼠标吸附加速距离
+		max_conn: 10 	//点到点最大连接数
+	}
+	function changePosition(){
+		var x=document.documentElement.clientWidth;
+		var y=document.documentElement.clientHeight;
+		$("#mydiv").css({"width":x,"height":y});
+	}
+	//调用
+	changePosition();
+	CanvasParticle(config);
+</script>
+
+</html>
